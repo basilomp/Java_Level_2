@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="477.0" maxWidth="658.0" prefHeight="477.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <SplitPane dividerPositions="0.2234910277324633" prefHeight="471.0" prefWidth="615.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane prefHeight="469.0" prefWidth="445.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="-4.0" prefHeight="25.0" prefWidth="64.0" text="Chat room" />
+                  <ListView fx:id="chatMembers" layoutY="18.0" prefHeight="447.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="384.0" prefWidth="334.0">
+               <children>
+                  <SplitPane dividerPositions="0.8822269807280514" orientation="VERTICAL" prefHeight="469.0" prefWidth="433.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                        <VBox prefHeight="409.0" prefWidth="460.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="414.0" text="Log" />
+                              <TextArea fx:id="chatLog" editable="false" prefHeight="392.0" prefWidth="474.0" />
+                           </children>
+                        </VBox>
+                        <AnchorPane prefHeight="44.0" prefWidth="431.0">
+                           <children>
+                              <TextField fx:id="inputText" layoutX="3.0" layoutY="15.0" onAction="#sendToTextArea" prefHeight="25.0" prefWidth="414.0" />
+                            <Button fx:id="sendButton" layoutX="421.0" layoutY="14.0" maxWidth="373.0" minWidth="53.0" mnemonicParsing="false" onAction="#sendToTextArea" prefHeight="25.0" prefWidth="73.0" text="Send" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
